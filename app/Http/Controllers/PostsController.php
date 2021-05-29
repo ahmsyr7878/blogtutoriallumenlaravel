@@ -6,7 +6,7 @@ use App\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Posts extends Controller
+class PostsController extends Controller
 {
     //create post
     public function createPost(Request $request)
@@ -28,6 +28,13 @@ class Posts extends Controller
         return response()->json($post);
     }
 
+    //update post
+    public function viewPost(Request $request, $id)
+    {
+        $post = Post::find($id);
+        
+        return response()->json($post);
+    }
     //delete post
     public function deletePost($id)
     {
