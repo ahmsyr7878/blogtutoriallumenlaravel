@@ -23,4 +23,12 @@ $router->group(['prefix' => 'api/v1'], function($router){
     $router->get('posts/{id}', 'PostsController@viewPost');
     $router->delete('posts/{id}', 'PostsController@deletePost');
     $router->get('posts', 'PostsController@index');
+
+    $router->post('users','UsersController@create');
+    $router->put('users/{id}', 'UsersController@edit');
+    $router->get('users/{id}', 'UsersController@view');
+    $router->delete('users/{id}', 'UsersController@delete');
+    $router->get('users', 'UsersController@index');
+
+
 });

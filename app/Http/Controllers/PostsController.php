@@ -29,7 +29,7 @@ class PostsController extends Controller
     }
 
     //update post
-    public function viewPost(Request $request, $id)
+    public function viewPost( $id)
     {
         $post = Post::find($id);
         
